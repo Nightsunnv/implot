@@ -1579,7 +1579,7 @@ void PlotLineEx(const char* label_id, const _Getter& getter, ImPlotLineFlags fla
         const ImPlotNextItemData& s = GetItemData();
         if (getter.Count > 1) {
             if (ImHasFlag(flags, ImPlotLineFlags_Shaded) && s.RenderFill) {
-                const ImU32 col_fill = (ImGui::GetColorU32(s.Colors[ImPlotCol_Fill]) & 0x00ffffff) | 0x40000000;
+                const ImU32 col_fill = ImGui::GetColorU32(s.Colors[ImPlotCol_Fill]);
                 GetterOverrideY<_Getter> getter2(getter, 0);
                 RenderPrimitives2<RendererShaded>(getter,getter2,col_fill);
             }

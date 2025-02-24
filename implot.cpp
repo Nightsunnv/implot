@@ -2945,7 +2945,7 @@ void EndPlot() {
             if (no_fmt)
                 Formatter_Default(v,buff,IMPLOT_LABEL_MAX_SIZE,(void*)IMPLOT_LABEL_FORMAT);
             else
-                LabelAxisValue(x_axis,v,buff,IMPLOT_LABEL_MAX_SIZE,true);
+                LabelAxisValue(x_axis,v,buff,IMPLOT_LABEL_MAX_SIZE,false);
             builder.append(buff);
             if (i > 0)
                 builder.append(")");
@@ -2962,7 +2962,7 @@ void EndPlot() {
             if (no_fmt)
                 Formatter_Default(v,buff,IMPLOT_LABEL_MAX_SIZE,(void*)IMPLOT_LABEL_FORMAT);
             else
-                LabelAxisValue(y_axis,v,buff,IMPLOT_LABEL_MAX_SIZE,true);
+                LabelAxisValue(y_axis,v,buff,IMPLOT_LABEL_MAX_SIZE,false);
             builder.append(buff);
             if (i > 0)
                 builder.append(")");
